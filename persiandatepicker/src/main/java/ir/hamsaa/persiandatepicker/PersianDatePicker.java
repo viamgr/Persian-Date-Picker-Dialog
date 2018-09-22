@@ -242,7 +242,7 @@ class PersianDatePicker extends LinearLayout {
             boolean isLeapYear = PersianCalendarUtils.isPersianLeapYear(selectedYear);
             if (isLeapYear && selectedDay == 31) {
                 selectedDay = 30;
-            } else if (selectedDay > 29) {
+            } else if (selectedDay > 29 && selectedMonth>11) {
                 selectedDay = 29;
             }
         }
@@ -354,7 +354,7 @@ class PersianDatePicker extends LinearLayout {
             boolean isLeapYear = PersianCalendarUtils.isPersianLeapYear(year);
             if (isLeapYear && day == 31) {
                 day = 30;
-            } else if (day > 29) {
+            } else if (day > 29 && month>11) {
                 day = 29;
             }
         }
